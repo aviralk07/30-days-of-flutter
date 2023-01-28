@@ -9,7 +9,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
+
         title: Text('Flutter Tutorial'),
       ),
       body: Center(
@@ -22,4 +24,4 @@ class HomePage extends StatelessWidget {
       drawer: Drawer(),
     );
   }
-}
+}  // day 2 completed
