@@ -1,5 +1,6 @@
 import 'package:flut_tutorial/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'pages/home_page.dart';
 
@@ -12,26 +13,29 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     // double pi = 3.14;
     // bool isMale = true;
     // num temp = 30.5;
     //
     // var day = "Saturday";
-  // const  pi = 3.14;
+    // const  pi = 3.14;
 // final = never be change
     return MaterialApp(
       // home: HomePage(),
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch:Colors.deepPurple ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
       ),
-     initialRoute: "/home",      // Default page
-     routes:{ "/":(context) => LoginPage(),
-       "/home":(context) => HomePage(),
-       "/login":(context) => LoginPage()},
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: "/",
+      // Default page
+      routes: {
+        "/": (context) => const LoginPage(),
+        "/home": (context) => const HomePage(),
+        "/login": (context) => const LoginPage()
+      },
     );
   }
 }

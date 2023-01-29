@@ -5,6 +5,8 @@ class HomePage extends StatelessWidget {
  final int days = 30;
  final String name ="Codepur";
 
+  const HomePage({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +14,16 @@ class HomePage extends StatelessWidget {
 
       appBar: AppBar(
 
-        title: Text('Flutter Tutorial'),
+        title: const Text('Flutter Tutorial'),
       ),
       body: Center(
-        child: Container(
+        child:  Container(
           child: Text("Welcome to $days days flutter by $name "
 
           ),
         ),
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }  // day 2 completed
